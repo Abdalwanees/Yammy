@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Yumme</title>
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- fontfamiy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <!-- anmation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="sidebar" class="sidebar h-100 d-flex">
+      <div class="bg-black" id="sideBarContent">
+        <div
+          class="slidecontent d-flex justify-content-between align-items-start flex-column ps-2"
+        >
+          <div class="items">
+            <ul class="ps-1 pt-3">
+              <li
+                id="search"
+                class="p-2 text-white animate__animated"
+              >
+                Search
+              </li>
+              <li
+                id="cate"
+                class="p-2 text-white animate__animated"
+              >
+                Categories
+              </li>
+              <li
+                id="area"
+                class="p-2 text-white animate__animated"
+              >
+                Area
+              </li>
+              <li
+                id="Ingredients"
+                class="p-2 text-white animate__animated"
+              >
+                Ingredients
+              </li>
+              <li
+                id="contactUs"
+                class="p-2 text-white animate__animated"
+              >
+                Contact Us
+              </li>
+            </ul>
+          </div>
+
+          <div class="slideBarFooter text-white pb-3 ps-1">
+            <div class="footerIcons d-flex">
+              <i class="fa-brands fa-facebook p-1"></i>
+              <i class="fa-brands fa-twitter p-1"></i>
+              <i class="fa-solid fa-globe p-1"></i>
+            </div>
+            <p class="p-1 text-nowrap" id="copyRightText">
+              Copyright Â© 2019 All Rights <br />
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="sidebox"
+        class="h-100 d-flex align-items-center justify-content-between flex-column bg-warning-subtle"
+      >
+        <div class="logo w-75">
+          <img src="image/logo.png" alt="logo" class="w-100 py-3" />
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-bars fa-2xl d-none" id="btn-bars"></i>
+          <i class="fa-solid fa-xmark fa-2xl" id="btn-xmark"></i>
+        </div>
+        <div
+          class="social-icons d-flex align-items-center justify-content-center flex-column pb-4"
+        >
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-share-nodes py-2"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container w-75" id="searchContainer"></div>
+
+    <section id="data" class="">
+      <div class="container">
+        <div class="row py-5 g-4 detailes" id="container"></div>
+      </div>
+    </section>
+
+    <div class="container w-75" id="searchContainer"></div>
+
+    <div id="load" class="load"></div>
+    <!-- js-connection -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
