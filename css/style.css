@@ -18,7 +18,7 @@ body {
 /*------------slideBar-------------------*/
 #sidebar {
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   top: 0;
   bottom: 0;
   left: 0;
@@ -98,7 +98,7 @@ input::placeholder {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  z-index: 99999 !important;
+  z-index: 999999999 !important;
 }
 .loader {
   width: 80px;

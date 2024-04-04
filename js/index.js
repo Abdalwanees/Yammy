@@ -64,6 +64,27 @@ let assign = document.getElementById("assign");
 //console.log(assign);
 let container = $("#container");
 
+/**************  Random  ****************/
+async function getRandomMeals() {
+  searchContainer.innerHTML = "";
+  load();
+  const meals = [];
+  for (let i = 0; i < 20; i++) {
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/random.php`
+    );
+    const data = await response.json();
+    meals.push(...data.meals);
+  }
+  displayMeals(meals);
+  stopLoading();
+}
+// async function getInitialMeals() {
+//   getRandomMeals();
+// }
+$(document).ready(function () {
+  getRandomMeals();
+});
 /**************  search  ****************/
 function search() {
   searchContainer.innerHTML = `
@@ -82,11 +103,9 @@ function search() {
 let byname = $("#inputsearchbyname");
 let byletter = $("#inputsearchbyletter");
 
-$(document).ready(function () {
-  $("#search").click(function () {
-    search();
-    Close();
-  });
+$("#search").click(function () {
+  search();
+  Close();
 });
 
 async function searchByName(name) {
@@ -173,11 +192,9 @@ function displayCategories(data) {
   container.html(showCategories);
 }
 
-$(document).ready(function () {
-  $("#cate").click(function () {
-    getCategories();
-    Close();
-  });
+$("#cate").click(function () {
+  getCategories();
+  Close();
 });
 
 async function getCategoryMeals(category) {
@@ -203,7 +220,7 @@ async function getArea() {
   displayArea(response.meals);
   stopLoading();
 }
-getCategories();
+// getCategories();
 /**************** area  *****************/
 function displayArea(data) {
   let showCategories = "";
@@ -220,11 +237,9 @@ function displayArea(data) {
   container.html(showCategories);
 }
 
-$(document).ready(function () {
-  $("#area").click(function () {
-    getArea();
-    Close();
-  });
+$("#area").click(function () {
+  getArea();
+  Close();
 });
 
 async function getAreaMeals(area) {
@@ -273,11 +288,10 @@ function displayIngredients(data) {
   }
   container.html(showCategories);
 }
-$(document).ready(function () {
-  $("#Ingredients").click(function () {
-    getIngredients();
-    Close();
-  });
+
+$("#Ingredients").click(function () {
+  getIngredients();
+  Close();
 });
 
 async function getIngredientsMeals(ingredients) {
